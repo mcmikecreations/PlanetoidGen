@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32422.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Domain", "src\PlanetoidGen.Domain\PlanetoidGen.Domain.csproj", "{D11915AD-A2C9-42AF-BB20-BEAD61C9F195}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Contracts", "src\PlanetoidGen.Contracts\PlanetoidGen.Contracts.csproj", "{F019AE34-BADC-47E0-AD0E-DEF2724C8E7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.BusinessLogic", "src\PlanetoidGen.BusinessLogic\PlanetoidGen.BusinessLogic.csproj", "{75A3A1D8-AAF0-49FC-8BBF-51565E3CD481}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Agents.Standard", "src\PlanetoidGen.Agents.Standard\PlanetoidGen.Agents.Standard.csproj", "{7EB75EF2-FB35-4692-BD68-F703DA7D46B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{84017C34-1A51-426C-98E7-A466F7F9346F}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.BusinessLogic.Agents", "src\PlanetoidGen.BusinessLogic.Agents\PlanetoidGen.BusinessLogic.Agents.csproj", "{3E41EB18-ECBD-453B-A044-72F24B577AAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.BusinessLogic.Common", "src\PlanetoidGen.BusinessLogic.Common\PlanetoidGen.BusinessLogic.Common.csproj", "{4CA13AD1-D681-4A4B-91F8-D2E7F3455E40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D11915AD-A2C9-42AF-BB20-BEAD61C9F195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11915AD-A2C9-42AF-BB20-BEAD61C9F195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11915AD-A2C9-42AF-BB20-BEAD61C9F195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11915AD-A2C9-42AF-BB20-BEAD61C9F195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F019AE34-BADC-47E0-AD0E-DEF2724C8E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F019AE34-BADC-47E0-AD0E-DEF2724C8E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F019AE34-BADC-47E0-AD0E-DEF2724C8E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F019AE34-BADC-47E0-AD0E-DEF2724C8E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A3A1D8-AAF0-49FC-8BBF-51565E3CD481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A3A1D8-AAF0-49FC-8BBF-51565E3CD481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A3A1D8-AAF0-49FC-8BBF-51565E3CD481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A3A1D8-AAF0-49FC-8BBF-51565E3CD481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB75EF2-FB35-4692-BD68-F703DA7D46B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB75EF2-FB35-4692-BD68-F703DA7D46B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB75EF2-FB35-4692-BD68-F703DA7D46B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB75EF2-FB35-4692-BD68-F703DA7D46B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E41EB18-ECBD-453B-A044-72F24B577AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E41EB18-ECBD-453B-A044-72F24B577AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E41EB18-ECBD-453B-A044-72F24B577AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E41EB18-ECBD-453B-A044-72F24B577AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA13AD1-D681-4A4B-91F8-D2E7F3455E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA13AD1-D681-4A4B-91F8-D2E7F3455E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA13AD1-D681-4A4B-91F8-D2E7F3455E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA13AD1-D681-4A4B-91F8-D2E7F3455E40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1145C7C3-91C3-4029-90D8-62103AC8F69E}
+	EndGlobalSection
+EndGlobal
