@@ -1,0 +1,9 @@
+DELETE FROM dyn.buildingentitycollection_0;
+DELETE FROM dyn.highwayentitycollection_0;
+DELETE FROM dyn.railwayentitycollection_0;
+DELETE FROM public.agentinfo;
+DELETE FROM public.filedependency;
+DELETE FROM public.tilebasedfileinfo;
+DELETE FROM public.fileinfo;
+DELETE FROM public.generationlods;
+DELETE FROM public.tileinfo;
