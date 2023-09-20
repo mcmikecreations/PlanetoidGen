@@ -1,3 +1,0 @@
-[submodule "libs/PlanetoidGen.Client/Assets/Dependencies/Plugins"]
-	path = libs/PlanetoidGen.Client/Assets/Dependencies/Plugins
-	url = git@github.com:UA-AI/masters_work_unity_plugins.git
