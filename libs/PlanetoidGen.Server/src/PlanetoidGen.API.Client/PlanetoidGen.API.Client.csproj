@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ClientDir>$(ProjectDir)../../../PlanetoidGen.Client/Assets/Dependencies/API/</ClientDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="../PlanetoidGen.API/Protos/Services/**/*.proto" GrpcServices="Client" OutputDir="$(ClientDir)" ProtoRoot="../PlanetoidGen.API/Protos" AdditionalImportDirs="../PlanetoidGen.API" />
+    <Protobuf Include="../PlanetoidGen.API/Protos/Models/**/*.proto" GrpcServices="None" OutputDir="$(ClientDir)" ProtoRoot="../PlanetoidGen.API/Protos" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.50.0" />
+    <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.50.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.50.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlanetoidGen.Core\src\PlanetoidGen.Agents.Standard\PlanetoidGen.Agents.Standard.csproj" />
+    <ProjectReference Include="..\..\..\PlanetoidGen.Core\src\PlanetoidGen.BusinessLogic\PlanetoidGen.BusinessLogic.csproj" />
+    <ProjectReference Include="..\..\..\PlanetoidGen.Core\src\PlanetoidGen.Contracts\PlanetoidGen.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\PlanetoidGen.Core\src\PlanetoidGen.Domain\PlanetoidGen.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+</Project>

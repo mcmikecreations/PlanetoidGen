@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package agent;
+
+import "Protos/Models/agent.proto";
+import "Protos/Models/common.proto";
+
+service Agent {
+    rpc SetAgents (agent.SetAgentsModel) returns (common.ItemsCountModel);
+    rpc GetAgents (common.QueryIdModel) returns (agent.AgentArrayModel);
+    rpc ClearAgents (common.QueryIdModel) returns (common.SuccessModel);
+    rpc GetAllAgentImplementations (common.EmptyModel) returns (agent.AgentImplementationArrayModel);
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package binary_content;
+
+import "Protos/Models/common.proto";
+import "Protos/Models/file_content.proto";
+import "Protos/Models/tile_info.proto";
+
+service BinaryContent {
+    rpc GetFileContent (stream common.StringIdModel) returns (stream file_content.FileContentModel);
+    rpc GetFileContentByTile (stream file_content.GetFileContentByTile) returns (stream file_content.FileContentArrayModel);
+    rpc GetFileContentIdsByTile (file_content.GetFileContentByTile) returns (file_content.FileContentIdsModel);
+    rpc GetFileContentByPath (file_content.GetFileContentByPathModel) returns (file_content.FileContentModel);
+    rpc SaveFileContent (file_content.FileContentModel) returns (common.SuccessModel);
+    rpc SaveFileContentWithDependencies (file_content.FileContentWithDependenciesModel) returns (common.SuccessModel);
+    rpc DeleteFileContent (common.StringIdModel) returns (common.SuccessModel);
+    rpc DeleteAllFileContentByTile (tile_info.GenericTileModel) returns (common.SuccessModel);
+}

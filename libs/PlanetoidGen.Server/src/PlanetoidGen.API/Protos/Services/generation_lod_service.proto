@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package generation_lod;
+
+import "Protos/Models/generation_lod.proto";
+import "Protos/Models/common.proto";
+
+service GenerationLOD {
+    rpc GetLOD (generation_lod.GetGenerationLODModel) returns (generation_lod.GenerationLODModel);
+    rpc GetLODs (common.QueryIdModel) returns (generation_lod.GenerationLODArrayModel);
+    rpc InsertLODs (generation_lod.InsertGenerationLODsModel) returns (common.ItemsCountModel);
+    rpc ClearLODs (common.QueryIdModel) returns (common.ItemsCountModel);
+}

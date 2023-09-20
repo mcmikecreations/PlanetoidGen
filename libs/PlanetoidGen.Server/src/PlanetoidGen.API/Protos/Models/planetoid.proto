@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package planetoid;
+
+message PlanetoidModel {
+    int32 planetoidId = 1;
+    string title = 2;
+    int64 seed = 3;
+    double radius = 4;
+}
+
+message PlanetoidArrayModel {
+    repeated PlanetoidModel planetoids = 1;
+}

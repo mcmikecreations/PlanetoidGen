@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package tile_info;
+
+message TileModel {
+    int32 planetoidId = 1;
+    int32 z = 2;
+    int64 x = 3;
+    int64 y = 4;
+    optional int32 lastAgent = 5;
+    string id = 6;
+}
+
+message GenericTileModel {
+    int32 planetoidId = 1;
+    int32 z = 2;
+    int64 x = 3;
+    int64 y = 4;
+}
+
+message TileArrayModel {
+    repeated TileModel tileInfos = 1;
+}

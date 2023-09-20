@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package tile_generation;
+
+import "Protos/Models/tile_info.proto";
+import "Protos/Models/tile_generation_info.proto";
+
+service TileGeneration {
+    rpc QueueTilesGeneration (stream tile_generation_info.TileGenerationArrayModel) returns (stream tile_info.TileArrayModel);
+}

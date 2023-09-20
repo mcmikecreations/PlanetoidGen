@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package generation_lod;
+
+message GenerationLODModel {
+    int32 planetoidId = 1;
+    int32 LOD = 2;
+    int32 z = 3;
+}
+
+message GenerationLODArrayModel {
+    repeated GenerationLODModel generationLODs = 1;
+}
+
+message GetGenerationLODModel {
+    int32 planetoidId = 1;
+    int32 LOD = 2;
+}
+
+message InsertGenerationLODsModel {
+    repeated GenerationLODModel generationLODs = 1;
+}

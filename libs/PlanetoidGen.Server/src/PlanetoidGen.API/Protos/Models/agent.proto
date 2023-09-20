@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package agent;
+
+message AgentModel {
+    int32 planetoidId = 1;
+    int32 indexId = 2;
+    string title = 3;
+    string settings = 4;
+    bool shouldRerunIfLast = 5;
+}
+
+message SetAgentModel {
+    string title = 1;
+    string settings = 2;
+    bool shouldRerunIfLast = 3;
+}
+
+message AgentArrayModel {
+    repeated AgentModel agents = 1;
+}
+
+message SetAgentsModel {
+    int32 planetoidId = 1;
+    repeated SetAgentModel agents = 2;
+}
+
+message AgentImplementationModel {
+    string title = 1;
+    string description = 2;
+    bool isVisibleToClient = 3;
+    string defaultSettings = 4;
+    repeated DataTypeModel outputs = 5;
+    repeated AgentDependencyModel dependencies = 6;
+    repeated SettingsAttributeModel settingsAtributes = 7;
+}
+
+message AgentImplementationArrayModel {
+    repeated AgentImplementationModel agents = 1;
+}
+
+message DataTypeModel {
+    string title = 1;
+    bool isRaster = 2;
+}
+
+message AgentDependencyModel {
+    RelativeTileDirectionType direction = 1;
+    DataTypeModel dataType = 2;
+}
+
+enum RelativeTileDirectionType {
+    Current = 0;
+    Up = 1;
+    Right = 2;
+    Down = 3;
+    Left = 4;
+}
+
+message SettingsAttributeModel {
+    string name = 1;
+    string typeName = 2;
+    string description = 3;
+    bool isNullable = 4;
+    repeated ValidationAttributeModel validationAttributes = 5;
+}
+
+message ValidationAttributeModel {
+    string name = 1;
+    repeated ValidationAttributePropertyModel properties = 2;
+}
+
+message ValidationAttributePropertyModel {
+    string name = 1;
+    string value = 2;
+}

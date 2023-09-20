@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package planetoid;
+
+import "Protos/Models/planetoid.proto";
+import "Protos/Models/common.proto";
+
+service Planetoid {
+    rpc AddPlanetoid (planetoid.PlanetoidModel) returns (common.QueryIdModel);
+    rpc GetPlanetoid (common.QueryIdModel) returns (planetoid.PlanetoidModel);
+    rpc RemovePlanetoid (common.QueryIdModel) returns (common.SuccessModel);
+    rpc ClearPlanetoids (common.EmptyModel) returns (common.ItemsCountModel);
+    rpc GetAllPlanetoids (common.EmptyModel) returns (planetoid.PlanetoidArrayModel);
+}

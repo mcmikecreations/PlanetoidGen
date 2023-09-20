@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package greet;
+
+// The greeting service definition.
+service DummyStream {
+    // Sends a greeting
+    rpc SendStreamMessage (stream StreamRequest) returns (stream StreamReply);
+}
+
+// The request message containing the user's name.
+message StreamRequest {
+    string message = 1;
+}
+
+// The response message containing the greetings.
+message StreamReply {
+    string message = 1;
+}

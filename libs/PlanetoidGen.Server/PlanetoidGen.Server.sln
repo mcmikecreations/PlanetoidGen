@@ -1,0 +1,145 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32422.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.API", "src\PlanetoidGen.API\PlanetoidGen.API.csproj", "{5127734F-ECFE-4513-9398-60D934A60C98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Domain", "..\PlanetoidGen.Core\src\PlanetoidGen.Domain\PlanetoidGen.Domain.csproj", "{898496CF-6E03-4909-9EF1-67FB74F1AF61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PlanetoidGen.Core", "PlanetoidGen.Core", "{BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.API.Client", "src\PlanetoidGen.API.Client\PlanetoidGen.API.Client.csproj", "{759BB360-D63B-4C1F-9177-9CE769545DD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Contracts", "..\PlanetoidGen.Core\src\PlanetoidGen.Contracts\PlanetoidGen.Contracts.csproj", "{3CB82DFC-9D59-42B4-AD7C-17653D12BD15}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.BusinessLogic", "..\PlanetoidGen.Core\src\PlanetoidGen.BusinessLogic\PlanetoidGen.BusinessLogic.csproj", "{4D5A1B4C-3563-4488-9BCF-54120117DB3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Infrastructure", "src\PlanetoidGen.Infrastructure\PlanetoidGen.Infrastructure.csproj", "{C6884EC5-9F35-42D9-9B85-13FD8DFD7D53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.DataAccess", "src\PlanetoidGen.DataAccess\PlanetoidGen.DataAccess.csproj", "{1A8FF75E-F67C-4D31-B3FC-C3620EB50486}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.BusinessLogic.Tests", "tests\PlanetoidGen.BusinessLogic.Tests\PlanetoidGen.BusinessLogic.Tests.csproj", "{123E71C5-B8C9-4D52-8969-E2ED3A72B5A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PlanetoidGen.Tests", "PlanetoidGen.Tests", "{D44DCB2F-B8A3-408D-9288-963DFCC8B65E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PlanetoidGen.Server", "PlanetoidGen.Server", "{3F91638C-84D8-41CC-9D73-EAAA8F61416E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Agents.Standard", "..\PlanetoidGen.Core\src\PlanetoidGen.Agents.Standard\PlanetoidGen.Agents.Standard.csproj", "{356F4742-CB2E-4534-B35F-6D334AF812B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{338C5613-9233-4255-8C1E-B74B1D6A230C}"
+	ProjectSection(SolutionItems) = preProject
+		..\.dockerignore = ..\.dockerignore
+		..\.editorconfig = ..\.editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.API.AgentWorker", "src\PlanetoidGen.API.AgentWorker\PlanetoidGen.API.AgentWorker.csproj", "{ABDCF643-07FE-4F53-8DF3-6B3C199283DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.BusinessLogic.Common", "..\PlanetoidGen.Core\src\PlanetoidGen.BusinessLogic.Common\PlanetoidGen.BusinessLogic.Common.csproj", "{C0839B52-4C90-4016-9CD2-4CABC2BAE292}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.BusinessLogic.Agents", "..\PlanetoidGen.Core\src\PlanetoidGen.BusinessLogic.Agents\PlanetoidGen.BusinessLogic.Agents.csproj", "{4E2D7E6A-7E4E-4B9E-A5F6-B8797EB7EA9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Agents.Procedural", "..\PlanetoidGen.Core\src\PlanetoidGen.Agents.Procedural\PlanetoidGen.Agents.Procedural.csproj", "{33CE7F96-DC3E-4633-ACE1-F27DC9EC347B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Agents.Osm", "..\PlanetoidGen.Core\src\PlanetoidGen.Agents.Osm\PlanetoidGen.Agents.Osm.csproj", "{366EF6D5-68E1-4501-A9E6-791BD48A96C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Agents.Tests", "tests\PlanetoidGen.Agents.Tests\PlanetoidGen.Agents.Tests.csproj", "{7C3C8F03-D21C-4A64-86F7-638DDB7D2168}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetoidGen.Agents.Procedural.Benchmarks", "tests\PlanetoidGen.Agents.Procedural.Benchmarks\PlanetoidGen.Agents.Procedural.Benchmarks.csproj", "{034B60D1-96C9-4F78-B15B-32C37AB7EFD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5127734F-ECFE-4513-9398-60D934A60C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5127734F-ECFE-4513-9398-60D934A60C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5127734F-ECFE-4513-9398-60D934A60C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5127734F-ECFE-4513-9398-60D934A60C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898496CF-6E03-4909-9EF1-67FB74F1AF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898496CF-6E03-4909-9EF1-67FB74F1AF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898496CF-6E03-4909-9EF1-67FB74F1AF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898496CF-6E03-4909-9EF1-67FB74F1AF61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{759BB360-D63B-4C1F-9177-9CE769545DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759BB360-D63B-4C1F-9177-9CE769545DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759BB360-D63B-4C1F-9177-9CE769545DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759BB360-D63B-4C1F-9177-9CE769545DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB82DFC-9D59-42B4-AD7C-17653D12BD15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB82DFC-9D59-42B4-AD7C-17653D12BD15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB82DFC-9D59-42B4-AD7C-17653D12BD15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB82DFC-9D59-42B4-AD7C-17653D12BD15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5A1B4C-3563-4488-9BCF-54120117DB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5A1B4C-3563-4488-9BCF-54120117DB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5A1B4C-3563-4488-9BCF-54120117DB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5A1B4C-3563-4488-9BCF-54120117DB3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6884EC5-9F35-42D9-9B85-13FD8DFD7D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6884EC5-9F35-42D9-9B85-13FD8DFD7D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6884EC5-9F35-42D9-9B85-13FD8DFD7D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6884EC5-9F35-42D9-9B85-13FD8DFD7D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8FF75E-F67C-4D31-B3FC-C3620EB50486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8FF75E-F67C-4D31-B3FC-C3620EB50486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8FF75E-F67C-4D31-B3FC-C3620EB50486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8FF75E-F67C-4D31-B3FC-C3620EB50486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123E71C5-B8C9-4D52-8969-E2ED3A72B5A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123E71C5-B8C9-4D52-8969-E2ED3A72B5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123E71C5-B8C9-4D52-8969-E2ED3A72B5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123E71C5-B8C9-4D52-8969-E2ED3A72B5A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356F4742-CB2E-4534-B35F-6D334AF812B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356F4742-CB2E-4534-B35F-6D334AF812B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356F4742-CB2E-4534-B35F-6D334AF812B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356F4742-CB2E-4534-B35F-6D334AF812B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDCF643-07FE-4F53-8DF3-6B3C199283DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDCF643-07FE-4F53-8DF3-6B3C199283DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDCF643-07FE-4F53-8DF3-6B3C199283DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDCF643-07FE-4F53-8DF3-6B3C199283DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0839B52-4C90-4016-9CD2-4CABC2BAE292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0839B52-4C90-4016-9CD2-4CABC2BAE292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0839B52-4C90-4016-9CD2-4CABC2BAE292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0839B52-4C90-4016-9CD2-4CABC2BAE292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2D7E6A-7E4E-4B9E-A5F6-B8797EB7EA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2D7E6A-7E4E-4B9E-A5F6-B8797EB7EA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2D7E6A-7E4E-4B9E-A5F6-B8797EB7EA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2D7E6A-7E4E-4B9E-A5F6-B8797EB7EA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33CE7F96-DC3E-4633-ACE1-F27DC9EC347B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33CE7F96-DC3E-4633-ACE1-F27DC9EC347B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33CE7F96-DC3E-4633-ACE1-F27DC9EC347B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33CE7F96-DC3E-4633-ACE1-F27DC9EC347B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366EF6D5-68E1-4501-A9E6-791BD48A96C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366EF6D5-68E1-4501-A9E6-791BD48A96C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366EF6D5-68E1-4501-A9E6-791BD48A96C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366EF6D5-68E1-4501-A9E6-791BD48A96C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3C8F03-D21C-4A64-86F7-638DDB7D2168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3C8F03-D21C-4A64-86F7-638DDB7D2168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3C8F03-D21C-4A64-86F7-638DDB7D2168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3C8F03-D21C-4A64-86F7-638DDB7D2168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034B60D1-96C9-4F78-B15B-32C37AB7EFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034B60D1-96C9-4F78-B15B-32C37AB7EFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034B60D1-96C9-4F78-B15B-32C37AB7EFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034B60D1-96C9-4F78-B15B-32C37AB7EFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5127734F-ECFE-4513-9398-60D934A60C98} = {3F91638C-84D8-41CC-9D73-EAAA8F61416E}
+		{898496CF-6E03-4909-9EF1-67FB74F1AF61} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{759BB360-D63B-4C1F-9177-9CE769545DD7} = {3F91638C-84D8-41CC-9D73-EAAA8F61416E}
+		{3CB82DFC-9D59-42B4-AD7C-17653D12BD15} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{4D5A1B4C-3563-4488-9BCF-54120117DB3F} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{C6884EC5-9F35-42D9-9B85-13FD8DFD7D53} = {3F91638C-84D8-41CC-9D73-EAAA8F61416E}
+		{1A8FF75E-F67C-4D31-B3FC-C3620EB50486} = {3F91638C-84D8-41CC-9D73-EAAA8F61416E}
+		{123E71C5-B8C9-4D52-8969-E2ED3A72B5A2} = {D44DCB2F-B8A3-408D-9288-963DFCC8B65E}
+		{356F4742-CB2E-4534-B35F-6D334AF812B0} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{ABDCF643-07FE-4F53-8DF3-6B3C199283DA} = {3F91638C-84D8-41CC-9D73-EAAA8F61416E}
+		{C0839B52-4C90-4016-9CD2-4CABC2BAE292} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{4E2D7E6A-7E4E-4B9E-A5F6-B8797EB7EA9F} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{33CE7F96-DC3E-4633-ACE1-F27DC9EC347B} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{366EF6D5-68E1-4501-A9E6-791BD48A96C7} = {BDCBBA5D-1EB6-43AF-9297-9DA7D64F27C2}
+		{7C3C8F03-D21C-4A64-86F7-638DDB7D2168} = {D44DCB2F-B8A3-408D-9288-963DFCC8B65E}
+		{034B60D1-96C9-4F78-B15B-32C37AB7EFD5} = {D44DCB2F-B8A3-408D-9288-963DFCC8B65E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7FA5304-B423-4008-BD29-5D6134E08B78}
+	EndGlobalSection
+EndGlobal

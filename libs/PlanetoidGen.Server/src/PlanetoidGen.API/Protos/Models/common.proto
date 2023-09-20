@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package common;
+
+message QueryIdModel {
+    int32 id = 1;
+}
+
+message StringIdModel {
+    string id = 1;
+}
+
+message SuccessModel {
+    bool success = 1;
+}
+
+message ItemsCountModel {
+    int32 count = 1;
+}
+
+message EmptyModel { }

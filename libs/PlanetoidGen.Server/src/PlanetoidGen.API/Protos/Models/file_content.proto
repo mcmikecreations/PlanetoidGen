@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlanetoidGen.API";
+
+package file_content;
+
+message FileContentModel {
+    string id = 1;
+    bytes fileContent = 2;
+    string fileName = 3;
+    string localPath = 4;
+    map<string, string> attributes = 5;
+    repeated FileDependencyModel dependentFiles = 6;
+    TileBasedInfoModel tileBasedInfo = 7;
+}
+
+message TileBasedInfoModel {
+    int32 planetoidId = 1;
+    int32 z = 2;
+    int64 x = 3;
+    int64 y = 4;
+    repeated double position = 5;
+    repeated double rotation = 6;
+    repeated double scale = 7;
+}
+
+message FileDependencyModel {
+    string referencedFileId = 1;
+    bool isRequired = 2;
+    bool isDynamic = 3;
+}
+
+message FileContentArrayModel {
+    repeated FileContentModel files = 1;
+}
+
+message GetFileContentByPathModel {
+    string fileName = 1;
+    string localPath = 2;
+}
+
+message GetFileContentByTile {
+    int32 planetoidId = 1;
+    int32 z = 2;
+    int64 x = 3;
+    int64 y = 4;
+    bool isRequiredOnly = 5;
+    bool isDynamicOnly = 6;
+}
+
+message FileContentIdsModel {
+    repeated string ids = 1;
+}
+
+message FileContentWithDependenciesModel {
+    FileContentModel file = 1;
+    repeated string dependencyFileIds = 2;
+}
