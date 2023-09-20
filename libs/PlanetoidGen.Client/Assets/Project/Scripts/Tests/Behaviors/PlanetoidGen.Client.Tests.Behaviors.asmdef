@@ -1,0 +1,22 @@
+{
+    "name": "PlanetoidGen.Client.Tests.Behaviors",
+    "rootNamespace": "PlanetoidGen.Client.Tests.Behaviors",
+    "references": [
+        "GUID:6dbe0cc7564d28c41a40929efdccd789",
+        "GUID:6c99baa5e601491438ada138e54039ae",
+        "GUID:9270fecf881952a4db92b358c732061c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

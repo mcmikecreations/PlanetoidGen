@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e7c609f8a4a44478ad8a10383e3a55, type: 3}
+  m_Name: Berestove
+  m_EditorClassIdentifier: 
+  _text: '<size=28px><b>Berestove, Bakhmut district, Donetsk region</b></size>
+
+    
+
+    The
+    enemy could not take the city with infantry units, so in order to force the ZSU
+    to withdraw, it was decided to simply wipe out the village with artillery. It
+    was very expensive for the Bolsheviks to occupy it.
+
+    (<color="blue"><link="a_0">Maxar
+    Technologies</link></color> via <color="blue"><link="a_1">DeepState</link></color>).'
+  _links:
+  - https://www.maxar.com/
+  - https://t.me/DeepStateUA/14863
+  _cameraPos: {x: -2194.0088, y: 577.8093, z: 3901.0798}
+  _cameraRot: {x: -0.34032628, y: 0.582723, z: -0.2929275, w: -0.6773517}
+  _locationLongitude: 38.254114972340055
+  _locationLatitude: 48.75116294910429
+  _locationZoom: 12

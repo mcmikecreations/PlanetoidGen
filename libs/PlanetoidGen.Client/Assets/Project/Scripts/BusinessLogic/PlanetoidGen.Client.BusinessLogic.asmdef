@@ -1,0 +1,16 @@
+{
+    "name": "PlanetoidGen.Client.BusinessLogic",
+    "rootNamespace": "PlanetoidGen.Client.BusinessLogic",
+    "references": [
+        "GUID:6dbe0cc7564d28c41a40929efdccd789"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

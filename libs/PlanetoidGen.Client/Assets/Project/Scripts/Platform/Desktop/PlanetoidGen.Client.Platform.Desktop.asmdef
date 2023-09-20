@@ -1,0 +1,25 @@
+{
+    "name": "PlanetoidGen.Client.Platform.Desktop",
+    "rootNamespace": "PlanetoidGen.Client.Platform.Desktop",
+    "references": [
+        "GUID:6dbe0cc7564d28c41a40929efdccd789",
+        "GUID:6c99baa5e601491438ada138e54039ae",
+        "GUID:85881b64390ca3b4dbca915fe3a12ebd"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "LinuxStandalone64",
+        "macOSStandalone",
+        "WSA",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

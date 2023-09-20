@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e7c609f8a4a44478ad8a10383e3a55, type: 3}
+  m_Name: Yakovlivka
+  m_EditorClassIdentifier: 
+  _text: '<size=28px><b>Yakovlivka, Donetsk region</b></size>
+
+    
+
+    Back in
+    the summer, fighting began in the area of the village, when the enemy''s DRG
+    tried to infiltrate the highway. Even then, enemy artillery began leveling the
+    village. Now Yakovlivka is in an even worse condition.
+
+    (<color="blue"><link="a_0">Maxar
+    Technologies</link></color> via <color="blue"><link="a_1">DeepState</link></color>).'
+  _links:
+  - https://www.maxar.com/
+  - https://t.me/DeepStateUA/14908
+  _cameraPos: {x: 229.224, y: 238.7707, z: 700.3647}
+  _cameraRot: {x: 0.30834028, y: -0.5767736, z: 0.24882823, w: 0.71438295}
+  _locationLongitude: 38.1437
+  _locationLatitude: 48.7086
+  _locationZoom: 12

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | {{{ PRODUCT_NAME }}}</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} style="width: {{{ WIDTH }}}px; height: {{{ HEIGHT }}}px; background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}}"></canvas>
+    <div id="wrapper" style="display: flex; justify-content: center">
+      <div style="text-align:justify; width: {{{ WIDTH }}}px">
+        <h1>Advent</h1>
+        <p>In European countries there is such a tradition - Advent. In simple words, this is fasting, during which there is a tradition of giving children some trinkets every day. Marketers in the 21st century beat this religious holiday as well, giving certain advantages to buyers. The Advent we show here will consist of interesting satellite photos related to the full-scale aggression against Ukraine.</p>
+        <div>
+          <a href="#"><h2 id="day05">Advent. Day 5 - the center of Mariupol, Donetsk region</h2></a>
+          <p>Relative estimates of the destruction of Mariupol are greatly exaggerated and they are smaller than in Popasna or Rubizhne, but in absolute terms, Mariupol is the sad leader in terms of the number of destroyed buildings and victims among the civilian population. For example, the southern and northern parts of the city survived quite a bit, but the center, the Azovstal district and the neighborhoods/quarters west of the center were destroyed and burned.</p>
+          <p>According to various estimates, the garrison of the city consisted of 4,000 to 8,000 soldiers, of which approximately 1,400 were soldiers of the "Azov" regiment. For the defense of a city with half a million inhabitants, this is a meager figure. Ten times more is needed, but this is precisely the feat of the defenders of Mariupol, who did not give up until May 18 that they were able to do 10 times more than they could. Having shown superhuman efforts and professionalism in defense planning, our fighters managed to organize an exemplary defense.</p>
+        </div>
+        <div>
+          <a href="#"><h2 id="day07">Advent. Day 7 - the village of Berestove, Donetsk region</h2></a>
+          <p>The enemy could not take the city with infantry units, so in order to force the Ukrainian Armed Forces to withdraw, it was decided to simply wipe out the village with artillery. It was very expensive for the russians to occupy it.</p>
+        </div>
+        <div>
+          <a href="#"><h2 id="day09">Advent. Day 9 - Dovhenke village, Kharkiv region</h2></a>
+          <p>Before the war, all of us saw shooters who painted russians with a "cauldron for the ATO/JFO group". Plans to encircle DonUR existed and they died in Dovhenke. It was there that the enemy was detained for a long time. Although as a result the Ukrainian Armed Forces withdrew from the village, which was left with the bare walls of destroyed buildings, the further movement of the russians towards Barvinkove was not only difficult, but also lost its strategic value. Dovhenke and the battles around the village are a really important page in the history of the war.</p>
+          <p>Of course, the entire line from Velika Komyshuvakha to Bogorodychny showed heroism and in no way do we want to belittle the sacrifices of others, because among them are our soldiers who were in literal hell in the same Valley.</p>
+        </div>
+        <div>
+          <a href="#"><h2 id="day10">Advent. Day 10 - Novotoshkivske, Luhansk region</h2></a>
+          <p>We hardly remembered the battles for Novotoshkivske and Toshkivske, because at that time there was no connection with anyone who was there. However, we want to correct this and tell in more detail about this episode of the war.</p>
+          <p>From February 15 to 24, the positions in this area were under heavy shelling, and intelligence recorded a significant build-up of equipment. With the beginning of a full-scale invasion, assaults on forward positions began with forces that greatly outnumbered ours. As a participant of those battles said: <i>"the fire was so intense that, for example, at the 29th checkpoint, the concrete capsules were completely buried in the ground... every day they used up as much ammunition as we didn't use up in a month."</i></p>
+          <p>Artillery fired steadily from 8 a.m. to 10 p.m. When the enemy knocked our people out of the neighborhood, fighting began in the village itself. In fact, even then, the enemy's stable tactics became apparent - first you raze everything to the ground, and then you enter. However, the battles there saved time and it was possible to organize defense in Toshkivka. The remnants of the Novotoshkivskyi garrison left the complete encirclement.</p>
+        </div>
+        <div>
+          <a href="#"><h2 id="day12">Advent. Day 12 - Yakovlivka, Donetsk region</h2></a>
+          <p>Back in the summer, fighting began in the area of the village, when the enemy's DRG tried to infiltrate the highway. Even then, enemy artillery began leveling the village. Now Yakovlivka is in an even worse condition.</p>
+        </div>
+      </div>
+    </div>
+    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_WASM
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#endif
+#if MEMORY_FILENAME
+        memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then((unityInstance) => {
+        const ids = ["day05","day07","day09","day10","day12"];
+        ids.forEach((id, ind) => document
+          .getElementById(id)
+          .addEventListener('click', function(event) {
+            unityInstance.SendMessage('Logic', 'LoadStoryByIndex', ind);
+          })
+        );
+      }).catch((message) => {
+        alert(message);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e7c609f8a4a44478ad8a10383e3a55, type: 3}
+  m_Name: Dovhenke
+  m_EditorClassIdentifier: 
+  _text: "<size=28px><b>Dovhenke</b></size>\n\nBefore the war, all of us saw shooters
+    who painted katsaps with a \"cauldron for the ATO/OSS group\". Plans to encircle
+    DonUR existed and they died in Dovgenky. It was there that the enemy was detained
+    for a long time. Although as a result the Armed Forces withdrew from the village,
+    which was left with the bare walls of destroyed buildings, the further movement
+    of the Katsaps towards Barvinkovo was not only difficult, but also lost its strategic
+    value. Dovgenka and the battles around the village are a really important page
+    in the history of the war.\r\n\r\nOf course, the entire line from Velika Komyshuvakha
+    to Bogorodychny showed heroism and in no way do we want to belittle the sacrifices
+    of others, because among them are our subscribers who were in hell in the same
+    Valley.\n\nThis satellite image shows a 40-metre\_crater\_in Dovhenke, Ukraine,
+    northwest of Slovyansk. (<color=\"blue\"><link=\"a_0\">Maxar Technologies</link></color>
+    via <color=\"blue\"><link=\"a_1\">DeepState</link></color>)."
+  _links:
+  - https://www.maxar.com/products/satellite-imagery
+  - https://t.me/DeepStateUA/14888
+  _cameraPos: {x: -1639.713, y: 243.4483, z: 757.4513}
+  _cameraRot: {x: 0.1802421, y: -0.81306684, z: 0.32937264, w: 0.44491434}
+  _locationLongitude: 38.3869
+  _locationLatitude: 48.9951
+  _locationZoom: 14
