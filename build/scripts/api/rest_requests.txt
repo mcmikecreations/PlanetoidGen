@@ -1,0 +1,10 @@
+
+-- DEBUG
+curl -s -k --request POST 'https://localhost:7118/api/messaging/topics/agents/reset' --http2-prior-knowledge
+curl -s -k --request GET 'https://localhost:7118/api/messaging/topics' --http2-prior-knowledge
+curl -s -k --request DELETE 'https://localhost:7118/api/messaging/topics' --http2-prior-knowledge
+
+-- k8s (LOCAL)
+curl -s -k --request POST 'https://localhost:5001/api/messaging/topics/agents/reset' --http2-prior-knowledge
+curl -s -k --request GET 'https://localhost:5001/api/messaging/topics' --http2-prior-knowledge
+curl -s -k --request DELETE 'https://localhost:5001/api/messaging/topics' --http2-prior-knowledge

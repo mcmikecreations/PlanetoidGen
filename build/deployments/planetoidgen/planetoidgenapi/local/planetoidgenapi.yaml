@@ -1,0 +1,106 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: planetoidgenapi-cert-storage
+  labels:
+    app: overpass
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: planetoidgenapi-cert-pv
+  labels:
+    type: local
+    app: planetoidgenapi
+spec:
+  storageClassName: planetoidgenapi-cert-storage
+  capacity:
+    storage: 10Mi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  local:
+    path: /run/desktop/mnt/host/c/k8s/cert
+  volumeMode: Filesystem
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - docker-desktop
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: planetoidgenapi
+  name: planetoidgenapi-cert-pvc
+spec:
+  storageClassName: planetoidgenapi-cert-storage
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: planetoidgenapi
+spec:
+  selector:
+    matchLabels:
+      app: planetoidgenapi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: planetoidgenapi
+    spec:
+      containers:
+        - name: planetoidgenapi
+          image: planetoidgenapi:latest
+          imagePullPolicy: Never
+          volumeMounts:
+            - mountPath: /mnt
+              name: planetoidgenapi-cert
+          ports:
+            - name: http
+              containerPort: 80
+            - name: https
+              containerPort: 443
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Local"
+          - name: ASPNETCORE_HTTPS_PORT
+            value: "443"
+          - name: ASPNETCORE_URLS
+            value: "https://+:443;http://+:80"
+          - name: ASPNETCORE_Kestrel__Certificates__Default__Path
+            value: "/mnt/aspnetapp.pfx"
+          - name: ASPNETCORE_Kestrel__Certificates__Default__Password
+            value: "cert_secret"
+      volumes:
+          - name: planetoidgenapi-cert
+            persistentVolumeClaim:
+              claimName: planetoidgenapi-cert-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: planetoidgenapi-loadbalancer-local
+spec:
+  selector:
+    app: planetoidgenapi
+  ports:
+  - port: 5000
+    targetPort: 80
+    name: http
+  - port: 5001
+    targetPort: 443
+    name: https
+  type: LoadBalancer

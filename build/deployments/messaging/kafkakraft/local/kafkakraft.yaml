@@ -1,0 +1,100 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: kafkakraft-local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kafkakraft-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: kafkakraft-local-storage
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  local:
+    path: /run/desktop/mnt/host/c/k8s/kafka
+  volumeMode: Filesystem
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - docker-desktop
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kafkakraft-pv-claim
+spec:
+  storageClassName: kafkakraft-local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-svc
+  labels:
+    app: kafkakraft
+spec:
+  clusterIP: None
+  ports:
+    - name: '9092'
+      port: 9092
+      protocol: TCP
+      targetPort: 9092
+  selector:
+    app: kafkakraft
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: kafka
+  labels:
+    app: kafkakraft
+spec:
+  serviceName: kafka-svc
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafkakraft
+  template:
+    metadata:
+      labels:
+        app: kafkakraft
+    spec:
+      volumes:
+        - name: kafka-storage
+          persistentVolumeClaim:
+            claimName: kafkakraft-pv-claim
+      containers:
+        - name: kafkakraft
+          image: kafka-kraft:2.13-3.3.2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9092
+            - containerPort: 9093
+          env:
+            - name: REPLICAS
+              value: '1'
+            - name: SERVICE
+              value: kafka-svc
+            - name: NAMESPACE
+              value: messaging
+            - name: SHARE_DIR
+              value: /mnt/kafka
+          volumeMounts:
+            - name: kafka-storage
+              mountPath: /mnt/kafka

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: planetoidgenapiagentworker
+spec:
+  selector:
+    matchLabels:
+      app: planetoidgenapiagentworker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: planetoidgenapiagentworker
+    spec:
+      containers:
+        - name: planetoidgenapiagentworker
+          image: planetoidgenapiagentworker:latest
+          imagePullPolicy: Never
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Local"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: planetoidgenapiagentworker-headless-svc
+spec:
+  clusterIP: None
+  selector:
+    app: planetoidgenapiagentworker
