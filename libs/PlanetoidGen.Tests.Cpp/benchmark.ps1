@@ -1,0 +1,1 @@
+Measure-Command {start-process benchmark_internal.bat -Wait}
